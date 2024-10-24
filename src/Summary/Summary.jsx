@@ -93,19 +93,27 @@ const Summary = () => {
           <img src={nexticon} className="nextbtn" onClick={nextSlide} />
           <div className="slider">
             {slides.map((slide, idx) => {
-              return <div>
+              return (
                 <div>
-                  <img
-                    src={slide.img}
-                    key={idx}
-                    className={eachSlide === idx ? "slide" : "slide hiddenslide"}
-                  ></img>
+                  <div>
+                    <img
+                      src={slide.img}
+                      key={idx}
+                      className={
+                        eachSlide === idx ? "slide" : "slide hiddenslide"
+                      }
+                    ></img>
+                  </div>
+                  <div
+                    className={
+                      eachSlide === idx ? "caption" : "caption hiddencaptions"
+                    }
+                  >
+                    <h6 className="header">{slide.h6}</h6>
+                    <p className="paragraph">{slide.p}</p>
+                  </div>
                 </div>
-                <div className={eachSlide === idx ? "caption" : 'caption hiddencaptions'}>
-                  <h6 className="header">{slide.h6}</h6>
-                  <p className="paragraph">{slide.p}</p>
-                </div>
-              </div>;
+              );
             })}
           </div>
           <div className="caption"></div>
@@ -116,7 +124,9 @@ const Summary = () => {
                   key={idx}
                   onClick={() => setEachSlide(idx)}
                   className={
-                    eachSlide === idx ? "indicator" : "indicator inactiveindicator"
+                    eachSlide === idx
+                      ? "indicator"
+                      : "indicator inactiveindicator"
                   }
                 ></button>
               );
