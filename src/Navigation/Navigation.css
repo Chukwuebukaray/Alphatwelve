@@ -1,0 +1,121 @@
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 1024px;
+    padding: 8px;
+    gap: 8px;
+    border-right: 1px solid #F1F5F9;
+}
+
+.logobox{
+    width: 224px;
+    height: fit-content;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+.logo{
+    width: 64px;
+    height: 32px;
+    background: #93C5FD;
+    border: 1px solid #2563EB;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    width: 224px;
+    height: fit-content;
+    gap: 16px;
+}
+
+.navitems{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 8px;
+}
+
+.navitem{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 8px;
+    gap: 16px;
+    border-radius: 2px;
+}
+.navitem img{
+    width: 20px;
+    height: 20px;
+}
+
+.navitem text{
+    width: 172px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #334155;
+}
+
+.bottom{
+    height: fit-content;
+    margin-top: 0;
+}
+
+.toggle{
+    width: 120px;
+    height:fit-content;
+    padding: 0px 8px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle text{
+    font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+        color: #334155;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 8px 16px 8px 8px;
+    gap: 8px;
+}
+
+.profile img{
+    width: 32px;
+    height: 32px;
+}
+
+.username{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+}
+
+.useremail{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #64748B;
+}
+
