@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navigation.css";
+import home from "../assets/home.png";
 import calendar from "../assets/calendar.png";
 import reports from "../assets/reports.png";
 import speakers from "../assets/speakers.png";
@@ -10,6 +11,11 @@ import collapse from "../assets/collapse.png";
 import avatar from "../assets/avatar.png";
 
 const Navigation = () => {
+  function toggleMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+
   return (
     <nav>
       <div className="top">
@@ -17,8 +23,8 @@ const Navigation = () => {
           <div className="logo">Full Logo</div>
         </div>
         <div className="navitems">
-          <div className="navitem">
-            <img src={calendar} />
+          <div className="navitem home">
+            <img src={home} />
             <text>Home</text>
           </div>
           <div className="navitem">
@@ -54,14 +60,17 @@ const Navigation = () => {
             <text>Collapse</text>
           </div>
         </div>
-        <div className="toggle">
-          <img src={collapse} />
+        <div className="darkmode">
+          <label className="switch">
+            <input type="checkbox" onClick={toggleMode} />
+            <span className="toggle round"></span>
+          </label>
           <text>Dark Mode</text>
         </div>
         <div className="profile">
           <img src={avatar} />
           <div className="userinfo">
-            <div className="username">Rudra Devi</div>
+            <div className="username writeup">Rudra Devi</div>
             <div className="useremail">rudra.devi@gmail.com</div>
           </div>
         </div>

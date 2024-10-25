@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Chart as ChartJS, Legend } from "chart.js/auto";
+import { Bar } from "react-chartjs-2";
 import "./Summary.css";
 import information from "../assets/information.png";
 import arrowupright from "../assets/arrowupright.png";
@@ -83,10 +85,36 @@ const Summary = () => {
           </div>
         </div>
       </div>
-      <text>Event Registrations per month</text>
+      <text className="writeup">Event Registrations per month</text>
       <div className="summarytop">
-        <div className="example">
-          <img src={example} />
+        <div className="chart">
+          <Bar
+            data={{
+              labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+              ],
+              datasets: [
+                {
+                  label: "",
+                  data: [
+                    670, 930, 770, 430, 1000, 570, 860, 360, 850, 670, 960, 610,
+                  ],
+                  backgroundColor: "#8576FF",
+                },
+              ],
+            }}
+          />
         </div>
         <div className="carousel">
           <img src={backicon} className="backbtn" onClick={prevSlide} />
@@ -135,7 +163,7 @@ const Summary = () => {
         </div>
       </div>
       <div className="history">
-        <text>Events History</text>
+        <text className="writeup">Events History</text>
         <div className="tablemodule">
           <div className="toolbar">
             <div className="left">
@@ -149,10 +177,10 @@ const Summary = () => {
               <div className="dropdown">
                 Name <img src={downicon} />
               </div>
-              <text>Displaying 100 results</text>
+              <text className="writeup">Displaying 100 results</text>
             </div>
             <div className="right">
-              <text>Sort</text>
+              <text className="writeup">Sort</text>
               <div className="dropdown">
                 Most Recent
                 <img src={downicon} />
@@ -211,61 +239,61 @@ const Summary = () => {
               <div className="cell">
                 {" "}
                 <div className="category green">
-                  <div className="dot"></div>Completed
+                  <div className="dot greendot"></div>Completed
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category blue">
-                  <div className="dot"></div>In Progress
+                  <div className="dot bluedot"></div>In Progress
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category green">
-                  <div className="dot"></div>Completed
+                  <div className="dot greendot"></div>Completed
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category green">
-                  <div className="dot"></div>Completed
+                  <div className="dot greendot"></div>Completed
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category green">
-                  <div className="dot"></div>Completed
+                  <div className="dot greendot"></div>Completed
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category green">
-                  <div className="dot"></div>Completed
+                  <div className="dot greendot"></div>Completed
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category blue">
-                  <div className="dot"></div>In Progress
+                  <div className="dot bluedot"></div>In Progress
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category green">
-                  <div className="dot"></div>Completed
+                  <div className="dot greendot"></div>Completed
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category blue">
-                  <div className="dot"></div>In Progress
+                  <div className="dot bluedot"></div>In Progress
                 </div>
               </div>
               <div className="cell">
                 {" "}
                 <div className="category blue">
-                  <div className="dot"></div>In Progress
+                  <div className="dot bluedot"></div>In Progress
                 </div>
               </div>
             </div>
@@ -276,8 +304,8 @@ const Summary = () => {
                 <img src={backicon} />
               </div>
               <div className="numbers one">1</div>
-              <div className="numbers">2</div>
-              <div className="numbers">3</div>
+              <div className="numbers writeup">2</div>
+              <div className=" writeup">3</div>
               <div className="next">
                 <img src={nexticon} />
               </div>

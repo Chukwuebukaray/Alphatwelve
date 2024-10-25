@@ -1,51 +1,53 @@
-/* :root {
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+  --text-color-1: #334155;
+  --text-color-2: #000000;
+  --text-color-3: #64748B;
+  --toggle-bg: #ccc;
+  --home-bg: #FCF7FF;
+  --border-color-1: #F1F5F9;
+  --email: #64748B;
+  --border-color-2: #F2F2F7;
+  --captions-background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 65%);
+  --border-color-3: #E2E8F0;
+  --placeholder: #CBD5E1;
+  --green-bg: #D1FAE5;
+  --blue-bg: #DBEAFE;
+}
+
 
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;color: #242424;
-  background: #ffffff;
-  min-height: 100vh;
-  /* transition: 1s; */
+  font-family: Inter, system-ui, Avenir,Helvetica, Arial, sans-serif;
+  color: #242424;
+  background: var(--background);
+  transition: 0.5s;
 }
 
-.darkmode{
-    background-color: #242424;
-    color: #ffffff;
+.dark-mode{
+    
+    --background: #383544;
+    --foreground: #484554;
+      --text-color-1: #FFFFFF;
+      --text-color-2: #ffffff;
+      --text-color-3: #ffffff;
+      --toggle-bg: #ccc;
+      --home-bg: #8576FF;
+      --border-color-1: #484554;
+      --email: #ffffff;
+      --border-color-2: #383544;
+      --captions-background: none;
+      --border-color-3: #484554;
+      --placeholder: #CBD5E1;
+      --th: #6A6676;
+      --green-bg: #484554;
+      --green-border: #65DDB5;
+      --blue-bg: #484554;
+      --blue-border: #77B1FF;
     transition: 1s;
-}
-/* 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: inherit;
-  background: inherit;
-  border-color: inherit;
-} */
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto;
 }

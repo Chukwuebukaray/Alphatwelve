@@ -3,7 +3,6 @@
 }
 
 .welcome{
-    width: 322px;
     height: 20px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -12,23 +11,24 @@
     font-weight: 400;
     line-height: 20px;
     text-align: left;
+    color: var(--text-color-2);
 }
 
 .stats{
+    width: auto;
     display: flex;
-    width: 1074px;
-    height: fit-content;
     gap: 12px;
     margin-bottom: 20px;
 }
 
 .stat{
-    width: 260px;
+    width: 25%;
     height: fit-content;
     padding: 16px;
     gap: 16px;
     border-radius: 2px;
-    border: 1px solid #F2F2F7
+    background: var(--foreground);
+    border: 1px solid var(--border-color-2)
 }
 
 .stat .label{
@@ -40,7 +40,7 @@
     font-weight: 600;
     line-height: 24px;
     text-align: left;
-    color: #64748B;
+    color: var(--text-color-3);
 }
 
 .stat .value{
@@ -52,6 +52,7 @@
     font-weight: 600;
     line-height: 32px;
     text-align: left;
+    color: var(--text-color-2);
 }
 
 .stat .value .percentage{
@@ -70,16 +71,28 @@
     color: #F43F5E;
 }
 
+.writeup{
+    color: var(--text-color-2);
+}
+
 .summarytop{
     display: flex;
     gap: 8px;
     height: 320px;
+    margin-bottom: 15px;
 }
 
+.chart{
+    background: var(--foreground);
+    border: 1px solid var(--border-color-2);
+    padding: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
 
 .carousel{
     position: relative;
-    width: 510px;
 }
 
 .backbtn{
@@ -110,22 +123,15 @@
     align-items: center;
 }
 
-.slide{
-    width: 100%;
-    height: 100%;
-}
-
 .hiddenslide, .hiddencaptions{
     display: none;
 }
-
-
 
 .caption{
     position: absolute;
     top: 52%;
     padding: 16px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 65%);
+    background: var(--captions-background)
 }
 
 .caption .header{
@@ -139,7 +145,6 @@
 }
 
 .caption .paragraph{
-    width: 478px;
     font-family: Inter;
     font-size: 12px;
     font-weight: 400;
@@ -184,7 +189,7 @@
 
 .toolbar .left input[type=search]{
     width: 200px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--border-color-3);
     height: fit-content;
     padding: 10px 10px 10px 30px;
     gap: 8px;
@@ -192,6 +197,7 @@
     background-image: url(../assets/search.png);
     background-repeat: no-repeat;
     background-position: 5px 5px;
+    background: var(--foreground);
 }
 
 .toolbar .left input::placeholder{
@@ -200,7 +206,7 @@
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    color: #CBD5E1;
+    color: var(--placeholder);
 }
 
 .dropdown{
@@ -210,14 +216,15 @@
     height: fit-content;
     padding: 8px 16px;
     gap: 8px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--border-color-3);
     border-radius: 2px;
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    color: #334155;
+    color: var(--text-color-1);
+    background: var(--foreground);
 }
 
 .right{
@@ -247,8 +254,6 @@
     width: 269px;
 }
 
-
-
 .cell{
     height: 48px;
     padding: 8px 16px;
@@ -257,7 +262,7 @@
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    color: #334155;
+    color: var(--text-color-1);
     display: flex;
     align-items: center;
 }
@@ -266,7 +271,7 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    background: #F1F5F9;
+    background: var(--th);
 }
 
 .category {
@@ -287,19 +292,28 @@
 .cell .dot{
     height: 6px;
     width: 6px;
-    background: #10B981;
     border-radius: 100%;
     margin: 5px;
 }
 
+.greendot{
+    background: #10B981;
+}
+
+.bluedot{
+    background: #3B82F6;
+}
+
 .green{
     color: #10B981;
-    background: #D1FAE5;;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border)
 }
 
 .blue{
     color: #3B82F6;
-    background: #DBEAFE;
+    background: var(--blue-bg);
+    border: 1px solid var(--blue-border)
 }
 
 .pagination{
@@ -319,12 +333,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--border-color-3);
     border-radius: 2px;
 }
 
 .prev{
-    background: #E2E8F0;
+    background: var(--border-color-3);
+}
+
+.next{
+    background: var(--foreground);
 }
 
 .numbers{
@@ -344,14 +362,14 @@
 
 .one{
     background: #8576FF;
-    color: #fff;
+    color: var(--background);
 }
 
 .rows{
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #334155;
+    color: var(--text-color-1);
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
