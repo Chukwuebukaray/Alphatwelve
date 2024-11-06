@@ -15,7 +15,6 @@
 }
 
 .stats{
-    width: auto;
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
@@ -76,9 +75,9 @@
 }
 
 .summarytop{
+    width: fit-content;
     display: flex;
     gap: 8px;
-    height: 320px;
     margin-bottom: 15px;
 }
 
@@ -88,10 +87,13 @@
     padding: 40px;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    /* width: fit-content; */
+    height: 240px;
+    /* justify-content: center; */
 }
 
 .carousel{
+    width: fit-content;
     position: relative;
 }
 
@@ -119,7 +121,7 @@
 .slider {
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -131,6 +133,7 @@
     position: absolute;
     top: 52%;
     padding: 16px;
+    width: 480px;
     background: var(--captions-background)
 }
 
@@ -176,7 +179,7 @@
 
 .toolbar , .modulebottom{
     display: flex;
-    width: 1076px;
+    /* width: 1076px; */
     height: fit-content;
     justify-content: space-between;
     align-items: center;
@@ -188,7 +191,8 @@
 }
 
 .toolbar .left input[type=search]{
-    width: 200px;
+    /* width: 200px; */
+    display: flex;
     border: 1px solid var(--border-color-3);
     height: fit-content;
     padding: 10px 10px 10px 30px;
@@ -232,6 +236,11 @@
     gap: 8px;
 }
 
+.sort, .export{
+    display: flex;
+    gap: 8px;
+}
+
 .dots{
     padding: 8px;
 }
@@ -251,7 +260,7 @@
 }
 
 .column{
-    width: 269px;
+    width: 100%;
 }
 
 .cell{
@@ -271,7 +280,7 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    background: var(--th);
+    background: var(--border-color-3);
 }
 
 .category {
@@ -314,6 +323,10 @@
     color: #3B82F6;
     background: var(--blue-bg);
     border: 1px solid var(--blue-border)
+}
+
+.modulebottom{
+    padding-bottom: 25px;
 }
 
 .pagination{
@@ -375,4 +388,148 @@
     font-weight: 400;
     line-height: 20px;
     text-align-last: left;
+}
+
+footer{
+    display: none;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-shadow: 0px 1px 0px 0px #F3F4F6 inset;
+    padding-top: 8px;
+}
+
+.bottomnav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.bottomnav img{
+    width: 24px;
+    height: 24px;
+}
+
+.bottomnav .home{
+    color: #8576FF;
+}
+
+.bottomnav:active, .bottomnav:focus{
+    border-top: 2px solid #8576FF;
+}
+
+
+@media (max-width: 500px) {
+    .welcome{
+        margin-top: 15px;
+    }
+    
+    .stats{
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .stat{
+        width: 90%;
+    }
+
+    .summarytop{
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .chart{
+        padding: 20px;
+        width: 83%;
+        /* height: 320px; */
+        margin-right: 20%;
+    }
+    .carousel{
+
+        /* width: 335px; */
+        margin-right: 20px;
+    }
+    
+    .carousel .slide{
+        width: 100%;
+        height: 320px;
+    }
+
+    .caption {
+        width: 90.5%;
+        padding: 5%;
+    }
+    
+    .caption .paragraph{
+        font-size: 11px;
+    }
+
+    .toolbar{
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .toolbar .left{
+        flex-direction: column;    
+    }
+
+    .left .dropdown{
+        width: 88%;
+        justify-content: center;    
+    }
+
+    input[type=search]{
+        width: 96%;
+    }
+
+    .left text{
+        align-self: normal;
+    }
+
+    .right{
+        flex-direction: column;
+    }
+
+    .sort, .export{
+        justify-content: space-between;
+        margin-right: 20px;
+    }
+
+    .column:nth-child(2), .column:nth-child(3){
+        display: none;
+    }
+
+    .table{
+        /* gap: 60px; */
+        margin-right: 20px;
+    }
+
+    .dot{
+        display: none;
+    }
+
+    .green{
+        background: #10B981;
+        color: #fff;
+    }
+
+    .blue{
+        background: #3B82F6;
+        color: #fff;
+    }
+
+    .rows text{
+        display: none;
+    }
+
+    footer{
+        display: flex;
+    }
 }

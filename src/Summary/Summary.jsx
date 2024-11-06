@@ -5,7 +5,12 @@ import "./Summary.css";
 import information from "../assets/information.png";
 import arrowupright from "../assets/arrowupright.png";
 import arrowdownright from "../assets/arrowdownright.png";
-import example from "../assets/example.png";
+import home from "../assets/home.png";
+import calendar from "../assets/calendar.png";
+import reports from "../assets/reports.png";
+import speakers from "../assets/speakers.png";
+import avatar from "../assets/avatar.png";
+
 import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
@@ -123,15 +128,14 @@ const Summary = () => {
             {slides.map((slide, idx) => {
               return (
                 <div>
-                  <div>
-                    <img
-                      src={slide.img}
-                      key={idx}
-                      className={
-                        eachSlide === idx ? "slide" : "slide hiddenslide"
-                      }
-                    ></img>
-                  </div>
+                  <img
+                    src={slide.img}
+                    key={idx}
+                    className={
+                      eachSlide === idx ? "slide" : "slide hiddenslide"
+                    }
+                  ></img>
+
                   <div
                     className={
                       eachSlide === idx ? "caption" : "caption hiddencaptions"
@@ -143,23 +147,22 @@ const Summary = () => {
                 </div>
               );
             })}
+            <span className="indicators">
+              {slides.map((_, idx) => {
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setEachSlide(idx)}
+                    className={
+                      eachSlide === idx
+                        ? "indicator"
+                        : "indicator inactiveindicator"
+                    }
+                  ></button>
+                );
+              })}
+            </span>
           </div>
-          <div className="caption"></div>
-          <span className="indicators">
-            {slides.map((_, idx) => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => setEachSlide(idx)}
-                  className={
-                    eachSlide === idx
-                      ? "indicator"
-                      : "indicator inactiveindicator"
-                  }
-                ></button>
-              );
-            })}
-          </span>
         </div>
       </div>
       <div className="history">
@@ -180,17 +183,21 @@ const Summary = () => {
               <text className="writeup">Displaying 100 results</text>
             </div>
             <div className="right">
-              <text className="writeup">Sort</text>
-              <div className="dropdown">
-                Most Recent
-                <img src={downicon} />
+              <div className="sort">
+                <text className="writeup">Sort:</text>
+                <div className="dropdown">
+                  Most Recent
+                  <img src={downicon} />
+                </div>
               </div>
-              <div className="dropdown dots">
-                <img src={dots} />
-              </div>
-              <div className="dropdown">
-                <img src={download} />
-                Export
+              <div className="export">
+                <div className="dropdown dots">
+                  <img src={dots} />
+                </div>
+                <div className="dropdown">
+                  <img src={download} />
+                  Export
+                </div>
               </div>
             </div>
           </div>
@@ -311,7 +318,7 @@ const Summary = () => {
               </div>
             </div>
             <div className="rows">
-              Show:
+              <text>Show:</text>
               <div className="dropdown">
                 10 Rows
                 <img src={downicon} />
@@ -320,6 +327,28 @@ const Summary = () => {
           </div>
         </div>
       </div>
+      <footer>
+        <div className="bottomnav">
+          <img src={home} />
+          <div className="home">Home</div>
+        </div>
+        <div className="bottomnav">
+          <img src={calendar} />
+          <div>Events</div>
+        </div>
+        <div className="bottomnav">
+          <img src={speakers} />
+          <div>Speakers</div>
+        </div>
+        <div className="bottomnav">
+          <img src={reports} />
+          <div>Reports</div>
+        </div>
+        <div className="bottomnav">
+          <img src={avatar} />
+          <div>Profile</div>
+        </div>
+      </footer>
     </div>
   );
 };

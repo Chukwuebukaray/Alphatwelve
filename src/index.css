@@ -9,6 +9,7 @@
   --text-color-3: #64748B;
   --toggle-bg: #ccc;
   --home-bg: #FCF7FF;
+  --home-color: #8576FF;
   --border-color-1: #F1F5F9;
   --email: #64748B;
   --border-color-2: #F2F2F7;
@@ -37,7 +38,8 @@ body {
       --text-color-2: #ffffff;
       --text-color-3: #ffffff;
       --toggle-bg: #ccc;
-      --home-bg: #8576FF;
+      --home-bg: #8576Ff;
+      --home-color: #fff;
       --border-color-1: #484554;
       --email: #ffffff;
       --border-color-2: #383544;
