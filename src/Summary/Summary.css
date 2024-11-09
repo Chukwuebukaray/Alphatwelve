@@ -93,7 +93,6 @@
 .carousel{
     width: fit-content;
     position: relative;
-    z-index: -1;
 }
 
 .backbtn{
