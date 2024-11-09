@@ -223,12 +223,13 @@ input:checked+.toggle:before {
 
     .navmenu{
         width: 90%;
-        height: 100vh;
+        height: 100%;
         padding-left: 20px;
         padding-right: 20px;
         position: fixed;
         top: 6%;
         right: -100%;
+        bottom: 0;
         background: var(--foreground);
         transition: 0.5s;
     }
