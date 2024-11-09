@@ -227,9 +227,9 @@ input:checked+.toggle:before {
         padding-left: 20px;
         padding-right: 20px;
         position: fixed;
-        top: 6%;
+        /* top: 6%; */
         right: -100%;
-        bottom: 0;
+        /* bottom: 0; */
         background: var(--foreground);
         transition: 0.5s;
     }
