@@ -217,20 +217,19 @@ input:checked+.toggle:before {
     }
     
     .navmenu.open{
-        display: flex;
+        right: 0;
     }
     
 
     .navmenu{
-        display: none;
         width: 90%;
         height: 100vh;
         padding-left: 20px;
         padding-right: 20px;
         position: fixed;
-        left: 0;
-        right: 0;
+        right: -100%;
         background: var(--foreground);
+        transition: 0.5s;
     }
 
     .hamburger{
