@@ -11,7 +11,7 @@ import settings from "../assets/settings.png";
 import collapse from "../assets/collapse.png";
 import avatar from "../assets/avatar.png";
 
-const Navigation = () => {
+const Navigation = ({ onClick }) => {
   const [mobileNav, setMobileNav] = useState(false);
 
   const toggleNav = () => {
@@ -38,7 +38,7 @@ const Navigation = () => {
             </div>
             <div className="navitem">
               <img src={calendar} />
-              <text>Events</text>
+              <text onClick={onClick}>Events</text>
             </div>
             <div className="navitem">
               <img src={speakers} />

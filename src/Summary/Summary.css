@@ -95,6 +95,7 @@
 .carousel{
     width: fit-content;
     position: relative;
+    z-index: -1;
 }
 
 .backbtn{
@@ -315,14 +316,15 @@
 
 .green{
     color: #10B981;
-    background: var(--green-bg);
+    background-: var(--green-bg);
     border: 1px solid var(--green-border)
 }
 
 .blue{
     color: #3B82F6;
     background: var(--blue-bg);
-    border: 1px solid var(--blue-border)
+    border: 1px solid var(--blue-border);
+    cursor: pointer;
 }
 
 .modulebottom{

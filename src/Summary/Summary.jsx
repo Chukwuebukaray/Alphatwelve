@@ -20,7 +20,7 @@ import downicon from "../assets/downicon.png";
 import download from "../assets/download.png";
 import dots from "../assets/dots.png";
 
-const Summary = () => {
+const Summary = ({ onClick }) => {
   const slides = [
     {
       img: slide1,
@@ -249,7 +249,7 @@ const Summary = () => {
                   <div className="dot greendot"></div>Completed
                 </div>
               </div>
-              <div className="cell">
+              <div className="cell" onClick={onClick}>
                 {" "}
                 <div className="category blue">
                   <div className="dot bluedot"></div>In Progress
@@ -279,7 +279,7 @@ const Summary = () => {
                   <div className="dot greendot"></div>Completed
                 </div>
               </div>
-              <div className="cell">
+              <div className="cell" onClick={onClick}>
                 {" "}
                 <div className="category blue">
                   <div className="dot bluedot"></div>In Progress
@@ -291,13 +291,13 @@ const Summary = () => {
                   <div className="dot greendot"></div>Completed
                 </div>
               </div>
-              <div className="cell">
+              <div className="cell" onClick={onClick}>
                 {" "}
                 <div className="category blue">
                   <div className="dot bluedot"></div>In Progress
                 </div>
               </div>
-              <div className="cell">
+              <div className="cell" onClick={onClick}>
                 {" "}
                 <div className="category blue">
                   <div className="dot bluedot"></div>In Progress
