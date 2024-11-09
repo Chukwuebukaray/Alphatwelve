@@ -19,6 +19,7 @@
   --green-bg: #D1FAE5;
   --blue-bg: #DBEAFE;
   --modal-footer: #F8FAFC;
+  --close: #484554;
 }
 
 
@@ -52,5 +53,7 @@ body {
       --green-border: #65DDB5;
       --blue-bg: #484554;
       --blue-border: #77B1FF;
+      --modal-footer: #ADA9BB;
+      --close: #484554;
     transition: 1s;
 }

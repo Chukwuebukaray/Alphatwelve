@@ -3,6 +3,7 @@ import "./App.css";
 import Modal from "./Modal/Modal";
 import Navigation from "./Navigation/Navigation";
 import Summary from "./Summary/Summary";
+import { createPortal } from "react-dom";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -17,14 +18,11 @@ function App() {
         <Navigation />
         <Summary onClick={() => setModalOpen(true)} />
       </div>
-      {modalOpen && (
-        <Modal
-          onClose={handleClick}
-          onComplete={null}
-          onDelete={null}
-          onEdit={null}
-        />
-      )}
+      {modalOpen &&
+        createPortal(
+          <Modal onClose={handleClick} onComplete={null} onDelete={null} />,
+          document.body
+        )}
     </>
   );
 }

@@ -1,14 +1,16 @@
 import React from "react";
 import "./Modal.css";
-import guestspeakers from '../assets/guestspeakers.png'
+import guestspeakers from "../assets/guestspeakers.png";
 
-const Modal = ({ onClose }) => {
+const Modal = ({ onClose, onDelete, onComplete }) => {
   return (
-    <div className="modalcontainer" onClick={(e) => {
-    if (e.target.className === 'modalcontainer') {
-        onClose();
-    }
-    }}
+    <div
+      className="modalcontainer"
+      onClick={(e) => {
+        if (e.target.className === "modalcontainer") {
+          onClose();
+        }
+      }}
     >
       <div className="modal">
         <div className="modalheader">
@@ -31,10 +33,16 @@ const Modal = ({ onClose }) => {
           </div>
         </div>
         <div className="modalfooter">
-          <button className="btn editbtn">Edit</button>
+          <button className="btn editbtn" onClick={onClose}>
+            Close
+          </button>
           <div>
-            <button className="btn deletebtn">Delete</button>
-            <button className="btn completedbtn">Mark as Completed</button>
+            <button className="btn deletebtn" onClick={onDelete}>
+              Delete
+            </button>
+            <button className="btn completedbtn" onClick={onComplete}>
+              Mark as Completed
+            </button>
           </div>
         </div>
       </div>

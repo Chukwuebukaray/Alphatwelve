@@ -1,13 +1,10 @@
 nav{
     display: flex;
     flex-direction: column;
-    /* width: 240px; */
-    /* height: 1024px; */
     padding: 8px;
     gap: 8px;
     border-right: 1px solid var(--border-color-1);
     background: var(--foreground);
-    /* display: none; */
 }
 
 .hamburger{
@@ -15,7 +12,6 @@ nav{
 }
 
 .logobox{
-    /* width: 224px; */
     height: fit-content;
     padding: 8px;
     margin-bottom: 12px;
@@ -82,11 +78,11 @@ nav{
     color: var(--text-color-1);
 }
 
-.home{
+.navitem .home{
     background: var(--home-bg);
 }
 
-.home text{
+.navitem .home text{
     color: var(--home-color);
 }
 
@@ -235,6 +231,7 @@ input:checked+.toggle:before {
         right: 0;
         z-index: 100;
         background: var(--foreground);
+        transition: all 1s ease;
     }
 
     .hamburger{
